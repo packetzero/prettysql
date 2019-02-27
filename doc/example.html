@@ -1,0 +1,24 @@
+<html>
+<head>
+  <link href="sqlstyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class='stmt'>
+
+<div class='keyword'>SELECT</div> <div class='field'>h.md5</div>, <div class='field'>h.sha1</div><BR>
+ &nbsp;&nbsp; , <div class='field'>h.sha256</div>, <div class='field'>s.name</div><BR>
+ &nbsp;&nbsp; , <div class='field'>s.service_type</div>, <div class='field'>s.display_name</div><BR>
+ &nbsp;&nbsp; , <div class='field'>s.module_path</div>, <div class='field'>s.user_account</div><BR>
+<div class='keyword'>FROM</div> <div class='tableref'>services</div> <div class='op_as'>AS</div> s, <div class='tableref'>hash</div> <div class='op_as'>AS</div> h<BR>
+<div class='keyword'>WHERE</div> ( h.path <div class='op'>=</div> s.module_path )<BR>
+ &nbsp;&nbsp; <div class='op'>AND</div> ( ( ( ( s.module_path <div class='keyword'>LIKE</div> <div class='stringval'>'%GeeSetup_x86%'</div> )<BR>
+ &nbsp;&nbsp;  &nbsp;&nbsp; <div class='op'>AND</div> ( h.sha256 <div class='op'>=</div> <div class='stringval'>'dc9b5e8aa6ec86db8af0a7aa897ca61db3e5f3d2e0942e319074db1aaccfdc83'</div> ) )<BR>
+ &nbsp;&nbsp;  &nbsp;&nbsp; <div class='op'>OR</div> ( ( s.module_path <div class='keyword'>LIKE</div> <div class='stringval'>'%EFACli64%'</div> )<BR>
+ &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; <div class='op'>AND</div> ( h.sha256 <div class='op'>=</div> <div class='stringval'>'128aca58be325174f0220bd7ca6030e4e206b4378796e82da460055733bb6f4f'</div> ) ) )<BR>
+ &nbsp;&nbsp;  &nbsp;&nbsp; <div class='op'>OR</div> ( ( s.module_path <div class='keyword'>LIKE</div> <div class='stringval'>'%TSMSISrv%'</div> )<BR>
+ &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp; <div class='op'>AND</div> ( h.sha256 <div class='op'>=</div> <div class='stringval'>'07fb252d2e853a9b1b32f30ede411f2efbb9f01e4a7782db5eacf3f55cf34902'</div> ) ) )
+
+ </div>
+ </body>
+ </html>
