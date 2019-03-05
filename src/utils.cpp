@@ -1,5 +1,6 @@
 #include <memory>
 #include <map>
+#include <string.h>
 
 #include "sqlexpr_util.h"
 #include "csvtoker.h"
