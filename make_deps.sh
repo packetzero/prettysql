@@ -1,3 +1,4 @@
+#!/bin/bash
 TOP=`dirname $0`
 mkdir -p ${TOP}/deps
 cd ${TOP}/deps
