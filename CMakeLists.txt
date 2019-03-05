@@ -10,7 +10,7 @@ set(CMAKE_CXX_EXTENSIONS OFF) # want c++11 not gnu++11
 
 set(CMAKE_CXX_RELEASE_FLAGS "-DNDEBUG=1")
 
-FIND_LIBRARY(SIMPLESQL_LIB simplesql HINT "${CMAKE_SOURCE_DIR}/deps/simplesql")
+FIND_LIBRARY(SIMPLESQL_LIB simplesql HINT "${CMAKE_SOURCE_DIR}/deps/simplesql/build")
 
 FIND_LIBRARY(RAPIDJSON_LIB rapidjson )
 
