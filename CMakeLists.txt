@@ -18,7 +18,7 @@ FIND_LIBRARY(ANTLR_LIB antlr4-runtime )
 
 
 if ("${RAPIDJSON_LIB}" STREQUAL "RAPIDJSON_LIB-NOTFOUND")
-  include_directories(${CMAKE_SOURCE_DIR}/deps/rapidjson)
+  include_directories(${CMAKE_SOURCE_DIR}/deps/rapidjson/include)
 endif()
 
 include_directories(${CMAKE_SOURCE_DIR}/deps/dyno/include)
